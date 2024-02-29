@@ -53,9 +53,9 @@ function playGame(){
     let playerScore = 0;
     let playerComputerTie = 0;
 
-    for (let i=0; i<5; i++){
+    for (let i=1; i<=5; i++){
         
-        round = playRound(playerSelection, getComputerChoice());
+        round = playRound(prompt(`Round ${i}: Rock Paper Scissors`), getComputerChoice());
         console.log(round);
 
         if (round.includes("You Win")){
@@ -71,6 +71,5 @@ function playGame(){
     console.log(calcScore(playerScore, computerScore) + " " + finalScore(playerScore, computerScore, playerComputerTie))
 }
 
-const playerSelection = prompt("");
 
 console.log(playGame())
