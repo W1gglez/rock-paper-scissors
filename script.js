@@ -10,7 +10,7 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    
+    console.log(playerSelection + " " + computerSelection)
   if (playerSelection === "Rock" && computerSelection === "Scissors") {
     return "win";
   } else if (playerSelection === "Rock" && computerSelection === "Paper") {
@@ -70,7 +70,8 @@ if (playerScore == 5 || computerScore == 5) {
 }
 
 btnRock.addEventListener("click", () => {
-  let round = playRound("rock", getComputerChoice());
+  let round = playRound("Rock", getComputerChoice());
+  console.log(round)
   if (round === "win") {
     results.textContent = "You Win! Rock beats Scissors.";
     playerScore += 1;
@@ -87,8 +88,8 @@ btnRock.addEventListener("click", () => {
 });
 
 btnPaper.addEventListener("click", () => {
-  let round = playRound("paper", getComputerChoice());
-
+  let round = playRound("Paper", getComputerChoice());
+  console.log(round)
   if (round === "win") {
     results.textContent = "You Win! Paper beats Rock.";
     playerScore += 1;
@@ -105,8 +106,8 @@ btnPaper.addEventListener("click", () => {
 });
 
 btnScissors.addEventListener("click", () => {
-  let round = playRound("scissors", getComputerChoice());
-
+  let round = playRound("Scissors", getComputerChoice());
+console.log(round)
   if (round === "win") {
     results.textContent = "You Win! Scissors beats Paper.";
     playerScore += 1;
