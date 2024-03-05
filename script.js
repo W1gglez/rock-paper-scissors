@@ -55,8 +55,8 @@ let playerScore = 0;
 const btnRock = document.querySelector("#rock");
 const btnPaper = document.querySelector("#paper");
 const btnScissors = document.querySelector("#scissors");
-const results = document.querySelector("#results");
-const score = document.querySelector("#score");
+let results = document.querySelector("#results");
+let score = document.querySelector("#score");
 
 function checkScore(playerscore, computerscore){
 if (playerScore == 5 || computerScore == 5) {
